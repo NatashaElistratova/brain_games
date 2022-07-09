@@ -1,0 +1,5 @@
+extends: eslint-config-airbnb-base
+rules:
+  no-console: off
+  import/extensions: off
+
