@@ -1,15 +1,22 @@
 #!/usr/bin/env node
 
-import getUserName from '../src/cli.js';
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 console.log('Welcome to the Brain Games!');
 
 const userName = getUserName();
+
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
 const iterationQuantity = 3;
 let prevRandomNumber = null;
 
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+function getUserName() {
+  const name = readlineSync.question('May I have your name: ');
+  console.log(`Hello, ${name}!`);
+
+  return name;
+}
 
 function getRandomInt(min, max) {
   const minRange = Math.ceil(min);
