@@ -1,16 +1,15 @@
-#!/usr/bin/env node
+import { roundsQuantity, welcomeUser, getUserName, getRandomNumber } from '../index.js';
 
-import { roundsQuantity, welcomeUser, getUserName, getRandomNumber } from '../../src/index.js';
+export default function brainEvenGame() {
+  welcomeUser();
 
-welcomeUser();
+  const userName = getUserName();
 
-const userName = getUserName();
+  function isNumberEven(number) {
+    return number % 2 === 0;
+  }
 
-function isNumberEven(number) {
-  return number % 2 === 0;
-}
-
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 // for (let i = 0; i < roundsQuantity; i++) {
 //   const randomNumber = getRandomNumber(prevRandomNumber);
@@ -35,3 +34,4 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 //   }
 // }
 
+}
