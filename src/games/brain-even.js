@@ -16,7 +16,7 @@ function showRules() {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 }
 
-function isUserAnswerCorrect(userAnswer, correctAnswer) {
+function checkAnswer(userAnswer, correctAnswer) {
   return userAnswer.toLowerCase() === correctAnswer;
 }
 
@@ -33,7 +33,7 @@ export default function brainEvenGame() {
 
     const userAnswer = getUserAnswer();
 
-    const result = isUserAnswerCorrect(userAnswer, correctAnswer);
+    const result = checkAnswer(userAnswer, correctAnswer);
 
     showResultMessage(result, i, userName, userAnswer, correctAnswer);
 

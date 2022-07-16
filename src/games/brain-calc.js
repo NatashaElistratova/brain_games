@@ -16,7 +16,7 @@ function showRules() {
   console.log('What is the result of the expression?');
 }
 
-function isUserAnswerCorrect(userAnswer, correctAnswer) {
+function checkAnswer(userAnswer, correctAnswer) {
   return Number(userAnswer) === correctAnswer;
 }
 
@@ -34,7 +34,7 @@ export default function brainCalcGame() {
 
     const userAnswer = getUserAnswer();
 
-    const result = isUserAnswerCorrect(userAnswer, correctAnswer);
+    const result = checkAnswer(userAnswer, correctAnswer);
 
     showResultMessage(result, i, userName, userAnswer, correctAnswer);
 
