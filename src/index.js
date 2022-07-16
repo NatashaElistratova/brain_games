@@ -1,6 +1,8 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 const roundsQuantity = 3;
+const minRandomNumber = 1;
+const maxRandomNumber = 101;
 let prevRandomNumber = null;
 
 function welcomeUser() {
@@ -20,14 +22,16 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (maxRange - minRange)) + minRange;
 }
 
-function getRandomNumber(prevValue) {
-  const result = getRandomInt(0, 101);
+function getRandomNumber() {
+  const result = getRandomInt(minRandomNumber, maxRandomNumber);
 
-  if (result !== prevValue) {
+  if (result !== prevRandomNumber) {
+    prevRandomNumber = result;
     return result;
-  } else {
-    getRandomNumber(prevValue);
   }
+  getRandomNumber();
 }
 
-export { roundsQuantity, welcomeUser, getUserName, getRandomNumber }
+export {
+  roundsQuantity, welcomeUser, getUserName, getRandomNumber,
+};
