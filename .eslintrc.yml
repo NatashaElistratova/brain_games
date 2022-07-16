@@ -3,4 +3,8 @@ rules:
   no-console: off
   import/extensions: off
   consistent-return: off
+  no-plusplus: off
+  no-useless-escape: off
+  no-trailing-spaces: off
+
 

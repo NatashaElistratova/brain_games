@@ -1,6 +1,11 @@
-import readlineSync from 'readline-sync';
 import {
-  roundsQuantity, welcomeUser, getUserName, getRandomNumber,
+  roundsQuantity, 
+  welcomeUser, 
+  getUserName, 
+  getRandomNumber, 
+  showQuestion, 
+  getUserAnswer,
+  showResultMessage,
 } from '../index.js';
 
 function isNumberEven(number) {
@@ -24,20 +29,15 @@ export default function brainEvenGame() {
     const randomNumber = getRandomNumber();
     const correctAnswer = isNumberEven(randomNumber) ? 'yes' : 'no';
 
-    console.log(`Question: ${randomNumber}`);
+    showQuestion(randomNumber);
 
-    const userAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = getUserAnswer();
 
     const result = isUserAnswerCorrect(userAnswer, correctAnswer);
 
-    if (result) {
-      console.log('Correct!');
-      if (i === roundsQuantity - 1) {
-        console.log(`Congratulations, ${userName}!`);
-      }
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let\'s try again, ${userName}!`);
+    showResultMessage(result, i, userName, userAnswer, correctAnswer);
+
+    if (!result) {
       return;
     }
   }
