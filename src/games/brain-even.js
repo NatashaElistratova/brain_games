@@ -1,19 +1,12 @@
 import {
   roundsQuantity, 
-  welcomeUser, 
-  getUserName, 
   getRandomNumber, 
-  showQuestion, 
-  getUserAnswer,
-  showResultMessage,
+  startGame,
+  playRound,
 } from '../index.js';
 
 function isNumberEven(number) {
   return number % 2 === 0;
-}
-
-function showRules() {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
 }
 
 function checkAnswer(userAnswer, correctAnswer) {
@@ -21,21 +14,13 @@ function checkAnswer(userAnswer, correctAnswer) {
 }
 
 export default function brainEvenGame() {
-  welcomeUser();
-  const userName = getUserName();
-  showRules();
+  const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+  startGame(rules);
 
   for (let i = 0; i < roundsQuantity; i++) {
     const randomNumber = getRandomNumber();
     const correctAnswer = isNumberEven(randomNumber) ? 'yes' : 'no';
-
-    showQuestion(randomNumber);
-
-    const userAnswer = getUserAnswer();
-
-    const result = checkAnswer(userAnswer, correctAnswer);
-
-    showResultMessage(result, i, userName, userAnswer, correctAnswer);
+    const result = playRound(i, randomNumber, correctAnswer, checkAnswer);
 
     if (!result) {
       return;

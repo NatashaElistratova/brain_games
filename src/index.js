@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 
+let userName = '';
 const roundsQuantity = 3;
 const minRandomNumber = 1;
 const maxRandomNumber = 101;
@@ -52,12 +53,30 @@ function showResultMessage(result, round, userName, userAnswer, correctAnswer) {
   }
 }
 
+function showRules(ruleText) {
+  console.log(ruleText);
+}
+
+function startGame(ruleText) {
+  welcomeUser();
+  userName = getUserName();
+  showRules(ruleText);
+}
+
+function playRound(round, questionValue, correctAnswer, checkAnswer) {
+  showQuestion(questionValue);
+  const userAnswer = getUserAnswer();
+
+  const result = checkAnswer(userAnswer, correctAnswer);
+
+  showResultMessage(result, round, userName, userAnswer, correctAnswer);
+
+  return result;
+}
+
 export {
   roundsQuantity, 
-  welcomeUser, 
-  getUserName, 
-  getRandomNumber, 
-  showQuestion, 
-  getUserAnswer, 
-  showResultMessage,
+  getRandomNumber,
+  startGame,
+  playRound,
 };
