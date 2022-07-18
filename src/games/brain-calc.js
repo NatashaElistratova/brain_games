@@ -5,8 +5,17 @@ import {
   playRound,
 } from '../index.js';
 
-function calcResult(value1, value2) {
-  return value1 + value2;
+const operandValues = ['+', '-', '*'];
+
+function getRandomOperand(values) {
+  return values[Math.floor(Math.random() * values.length)];
+}
+
+function calcResult(value1, value2, operand) {
+  const expression = `${value1} ${operand} ${value2}`;
+  const resultFunc = new Function(`return ${expression} `);
+
+  return resultFunc();
 }
 
 function checkAnswer(userAnswer, correctAnswer) {
@@ -20,8 +29,9 @@ export default function brainCalcGame() {
   for (let i = 0; i < roundsQuantity; i++) {
     const number1 = getRandomNumber();
     const number2 = getRandomNumber();
-    const correctAnswer = calcResult(number1, number2);
-    const questionValue = `${number1} + ${number2}`;
+    const operand = getRandomOperand(operandValues);
+    const correctAnswer = calcResult(number1, number2, operand);
+    const questionValue = `${number1} ${operand} ${number2}`;
     const result = playRound(i, questionValue, correctAnswer, checkAnswer);
 
     if (!result) {
