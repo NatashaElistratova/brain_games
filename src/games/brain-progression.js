@@ -14,7 +14,7 @@ function getProgressionString(firstNumber, step, length) {
   let prevNumber = firstNumber;
 
   for (let i = 0; i < length; i++) {
-    const arrItem = prevNumber + step;
+    const arrItem = Number(prevNumber) + Number(step);
     result.push(arrItem);
     prevNumber = arrItem;
   }
