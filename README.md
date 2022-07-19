@@ -7,6 +7,9 @@ Game 1. Brain-even
 [![asciicast](https://asciinema.org/a/xK4h4f2HqI5djJ3wF6oVuOmD4.svg)](https://asciinema.org/a/xK4h4f2HqI5djJ3wF6oVuOmD4)
 
 Game 2. Brain-calc
-[![asciicast]( https://asciinema.org/a/Kd5Uum18hPFiKPRad4D4vhTgr.svg)](https://asciinema.org/a/Kd5Uum18hPFiKPRad4D4vhTgr)
+[![asciicast](  https://asciinema.org/a/ubZhNTwZFTBiQF1aGsebkdXic.svg)]( https://asciinema.org/a/ubZhNTwZFTBiQF1aGsebkdXic)
+
+Game 2. Brain-gcd
+[![asciicast]( https://asciinema.org/a/aFcj32myUEpy5pkF6Ccqgrs0C.svg)]( https://asciinema.org/a/aFcj32myUEpy5pkF6Ccqgrs0C)
 
 
