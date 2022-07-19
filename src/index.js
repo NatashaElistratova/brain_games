@@ -23,8 +23,8 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (maxRange - minRange)) + minRange;
 }
 
-function getRandomNumber() {
-  const result = getRandomInt(minRandomNumber, maxRandomNumber);
+function getRandomNumber(min = minRandomNumber, max = maxRandomNumber) {
+  const result = getRandomInt(min, max);
 
   if (result !== prevRandomNumber) {
     prevRandomNumber = result;
