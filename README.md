@@ -15,3 +15,6 @@ Game 3. Brain-gcd
 Game 4. Brain-progression
 [![asciicast]( https://asciinema.org/a/tEF4uU7Elc1orLIgGFgCIRfTB.svg)](  https://asciinema.org/a/tEF4uU7Elc1orLIgGFgCIRfTB)
 
+Game 5. Brain-prime
+[![asciicast]( https://asciinema.org/a/hXUQr42o4di6ywIjtME8FXQSq.svg)](  https://asciinema.org/a/hXUQr42o4di6ywIjtME8FXQSq)
+
