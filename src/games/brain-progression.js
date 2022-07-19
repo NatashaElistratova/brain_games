@@ -28,8 +28,8 @@ function checkAnswer(userAnswer, correctAnswer) {
   return Number(userAnswer) === correctAnswer;
 }
 
-export default function brainProgression() {
-  const rules = 'Find the greatest common divisor of given numbers.';
+export default function brainGcdGame() {
+  const rules = 'What number is missing in the progression?';
   startGame(rules);
 
   for (let i = 0; i < roundsQuantity; i++) {
