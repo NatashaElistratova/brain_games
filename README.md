@@ -9,7 +9,9 @@ Game 1. Brain-even
 Game 2. Brain-calc
 [![asciicast](  https://asciinema.org/a/ubZhNTwZFTBiQF1aGsebkdXic.svg)]( https://asciinema.org/a/ubZhNTwZFTBiQF1aGsebkdXic)
 
-Game 2. Brain-gcd
+Game 3. Brain-gcd
 [![asciicast]( https://asciinema.org/a/aFcj32myUEpy5pkF6Ccqgrs0C.svg)]( https://asciinema.org/a/aFcj32myUEpy5pkF6Ccqgrs0C)
 
+Game 4. Brain-progression
+[![asciicast]( https://asciinema.org/a/tEF4uU7Elc1orLIgGFgCIRfTB.svg)](  https://asciinema.org/a/tEF4uU7Elc1orLIgGFgCIRfTB)
 
