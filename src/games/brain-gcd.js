@@ -6,22 +6,13 @@ import {
 } from '../index.js';
 
 function calcResult(value1, value2) {
-  // use Euclid's method
-  let dividend = Math.max(value1, value2);
-  let divisor = Math.min(value1, value2);
-  let reminder = dividend % divisor;
-  let result;
+  const reminder = value1 % value2;
 
-  while (reminder > 0) {
-    reminder = dividend % divisor;
-    if (reminder === 0) {
-      result = divisor;
-    }
-    dividend = divisor;
-    divisor = reminder;
+  if (reminder === 0) {
+    return value2;
+  } else {
+    return calcResult(value2, reminder);
   }
-
-  return result;
 }
 
 function checkAnswer(userAnswer, correctAnswer) {
@@ -35,7 +26,9 @@ export default function brainProgression() {
   for (let i = 0; i < roundsQuantity; i++) {
     const number1 = getRandomNumber();
     const number2 = getRandomNumber();
-    const correctAnswer = calcResult(number1, number2);
+    const graterNumber = Math.max(number1, number2);
+    const lowerNumber = Math.min(number1, number2);
+    const correctAnswer = calcResult(graterNumber, lowerNumber);
     const questionValue = `${number1} ${number2}`;
     const result = playRound(i, questionValue, correctAnswer, checkAnswer);
 
