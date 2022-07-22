@@ -8,14 +8,19 @@ import {
 const operandValues = ['+', '-', '*'];
 
 function getRandomOperand(values) {
-  return values[Math.floor(Math.random() * values.length)];
+  const index = getRandomNumber(0, 3);
+
+  return values[index];
 }
 
 function calcResult(value1, value2, operand) {
-  const expression = `${value1} ${operand} ${value2}`;
-  const resultFunc = new Function(`return ${expression} `);
-
-  return resultFunc();
+  if (operand === '+') {
+    return value1 + value2;
+  } else if (operand === '-') {
+    return value1 - value2;
+  } else {
+    return value1 * value2;
+  }
 }
 
 function checkAnswer(userAnswer, correctAnswer) {

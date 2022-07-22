@@ -6,18 +6,17 @@ import {
 } from '../index.js';
 
 function calcResult(value) {
-  if (value === 1) {
+  if (value < 2) {
     return false;
-  } else if (value === 2) {
-    return true;
-  } else {
-    for (let i = 2; i < value; i++) {
-      if (value % i === 0) {
-        return false;
-      }
-    }
-    return true;
   }
+
+  for (let i = 2; i < Math.sqrt(value); i++) {
+    if (value % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 function checkAnswer(userAnswer, correctAnswer) {
