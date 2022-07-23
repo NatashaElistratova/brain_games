@@ -1,11 +1,12 @@
 import {
-  roundsQuantity,
   getRandomNumber,
-  startGame,
-  playRound,
+  playGame,
 } from '../index.js';
 
 const operandValues = ['+', '-', '*'];
+let number1;
+let number2;
+let operand;
 
 function getRandomOperand(values) {
   const index = getRandomNumber(0, 3);
@@ -13,13 +14,21 @@ function getRandomOperand(values) {
   return values[index];
 }
 
-function calcResult(value1, value2, operand) {
+function createQuestionValue() {
+  number1 = getRandomNumber();
+  number2 = getRandomNumber();
+  operand = getRandomOperand(operandValues);
+
+  return `${number1} ${operand} ${number2}`;
+}
+
+function calcResult() {
   if (operand === '+') {
-    return value1 + value2;
+    return number1 + number2;
   } else if (operand === '-') {
-    return value1 - value2;
+    return number1 - number2;
   } else {
-    return value1 * value2;
+    return number1 * number2;
   }
 }
 
@@ -29,18 +38,6 @@ function checkAnswer(userAnswer, correctAnswer) {
 
 export default function brainCalcGame() {
   const rules = 'What is the result of the expression?';
-  startGame(rules);
 
-  for (let i = 0; i < roundsQuantity; i++) {
-    const number1 = getRandomNumber();
-    const number2 = getRandomNumber();
-    const operand = getRandomOperand(operandValues);
-    const correctAnswer = calcResult(number1, number2, operand);
-    const questionValue = `${number1} ${operand} ${number2}`;
-    const result = playRound(i, questionValue, correctAnswer, checkAnswer);
-
-    if (!result) {
-      return;
-    }
-  }
+  playGame(rules, createQuestionValue, calcResult, checkAnswer);
 }

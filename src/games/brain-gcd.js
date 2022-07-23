@@ -1,9 +1,10 @@
 import {
-  roundsQuantity,
   getRandomNumber,
-  startGame,
-  playRound,
+  playGame,
 } from '../index.js';
+
+let number1;
+let number2;
 
 function calcResult(value1, value2) {
   const reminder = value1 % value2;
@@ -15,25 +16,26 @@ function calcResult(value1, value2) {
   }
 }
 
+function createQuestionValue() {
+  number1 = getRandomNumber();
+  number2 = getRandomNumber();
+
+  return `${number1} ${number2}`;
+}
+
+function calcCorrectAnswer() {
+  const graterNumber = Math.max(number1, number2);
+  const lowerNumber = Math.min(number1, number2);
+
+  return calcResult(graterNumber, lowerNumber);
+}
+
 function checkAnswer(userAnswer, correctAnswer) {
   return Number(userAnswer) === correctAnswer;
 }
 
 export default function brainProgression() {
   const rules = 'Find the greatest common divisor of given numbers.';
-  startGame(rules);
 
-  for (let i = 0; i < roundsQuantity; i++) {
-    const number1 = getRandomNumber();
-    const number2 = getRandomNumber();
-    const graterNumber = Math.max(number1, number2);
-    const lowerNumber = Math.min(number1, number2);
-    const correctAnswer = calcResult(graterNumber, lowerNumber);
-    const questionValue = `${number1} ${number2}`;
-    const result = playRound(i, questionValue, correctAnswer, checkAnswer);
-
-    if (!result) {
-      return;
-    }
-  }
+  playGame(rules, createQuestionValue, calcCorrectAnswer, checkAnswer);
 }

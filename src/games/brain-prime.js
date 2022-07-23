@@ -1,8 +1,6 @@
 import {
-  roundsQuantity,
   getRandomNumber,
-  startGame,
-  playRound,
+  playGame,
 } from '../index.js';
 
 function calcResult(value) {
@@ -19,21 +17,16 @@ function calcResult(value) {
   return true;
 }
 
+function calcCorrectAnswer(value) {
+  return calcResult(value) ? 'yes' : 'no';
+}
+
 function checkAnswer(userAnswer, correctAnswer) {
   return userAnswer.toLowerCase() === correctAnswer;
 }
 
 export default function brainPrimeGame() {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  startGame(rules);
 
-  for (let i = 0; i < roundsQuantity; i++) {
-    const number = getRandomNumber();
-    const correctAnswer = calcResult(number) ? 'yes' : 'no';
-    const result = playRound(i, number, correctAnswer, checkAnswer);
-
-    if (!result) {
-      return;
-    }
-  }
+  playGame(rules, getRandomNumber, calcCorrectAnswer, checkAnswer);
 }

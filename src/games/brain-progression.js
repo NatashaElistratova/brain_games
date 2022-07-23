@@ -1,8 +1,6 @@
 import {
-  roundsQuantity,
   getRandomNumber,
-  startGame,
-  playRound,
+  playGame,
 } from '../index.js';
 
 const progressionLength = 6;
@@ -12,7 +10,7 @@ function getProgression(firstNumber, step, length) {
   const result = [firstNumber];
   let prevNumber = firstNumber;
 
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length - 1; i++) {
     const arrItem = Number(prevNumber) + Number(step);
     result.push(arrItem);
     prevNumber = arrItem;
@@ -21,11 +19,19 @@ function getProgression(firstNumber, step, length) {
   return result;
 }
 
-function createQuestion(array) {
-  const missedItemIndex = getRandomNumber(0, array.length);
-  correctAnswer = array.splice(missedItemIndex, 1, '..');
+function createQuestionValue() {
+  const firstNumber = getRandomNumber(1, 10);
+  const step = getRandomNumber(1, 10);
+  const progression = getProgression(firstNumber, step, progressionLength);
+  const missedItemIndex = getRandomNumber(0, progression.length + 1);
 
-  return array.join(' ');
+  correctAnswer = progression.splice(missedItemIndex, 1, '..');
+
+  return progression.join(' ');
+}
+
+function calcCorrectAnswer() {
+  return correctAnswer;
 }
 
 function checkAnswer(userAnswer) {
@@ -34,17 +40,6 @@ function checkAnswer(userAnswer) {
 
 export default function brainProgression() {
   const rules = 'What number is missing in the progression?';
-  startGame(rules);
 
-  for (let i = 0; i < roundsQuantity; i++) {
-    const firstNumber = getRandomNumber(1, 10);
-    const step = getRandomNumber(1, 10);
-    const progression = getProgression(firstNumber, step, progressionLength);
-    const question = createQuestion(progression);
-    const result = playRound(i, question, correctAnswer, checkAnswer);
-
-    if (!result) {
-      return;
-    }
-  }
+  playGame(rules, createQuestionValue, calcCorrectAnswer, checkAnswer);
 }

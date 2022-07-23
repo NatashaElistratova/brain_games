@@ -6,17 +6,6 @@ const minRandomNumber = 1;
 const maxRandomNumber = 101;
 let prevRandomNumber = null;
 
-function welcomeUser() {
-  console.log('Welcome to the Brain Games!');
-}
-
-function getUserName() {
-  const name = readlineSync.question('May I have your name: ');
-  console.log(`Hello, ${name}!`);
-
-  return name;
-}
-
 function getRandomInt(min, max) {
   const minRange = Math.ceil(min);
   const maxRange = Math.floor(max);
@@ -33,50 +22,46 @@ function getRandomNumber(min = minRandomNumber, max = maxRandomNumber) {
   getRandomNumber();
 }
 
-function showQuestion(value) {
-  console.log(`Question: ${value}`);
-}
-
-function getUserAnswer() {
-  return readlineSync.question('Your answer: ');
-}
-
-function showResultMessage(result, round, userName, userAnswer, correctAnswer) {
+function showResultMessage(result, round, name, userAnswer, correctAnswer) {
   if (result) {
     console.log('Correct!');
     if (round === roundsQuantity - 1) {
-      console.log(`Congratulations, ${userName}!`);
+      console.log(`Congratulations, ${name}!`);
     }
   } else {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    console.log(`Let\'s try again, ${userName}!`);
+    console.log(`Let\'s try again, ${name}!`);
   }
 }
 
-function showRules(ruleText) {
+function playGame(ruleText, getQuestionValue, calcCorrectAnswer, checkAnswer) {
+  console.log('Welcome to the Brain Games!');
+
+  userName = readlineSync.question('May I have your name: ');
+
+  console.log(`Hello, ${userName}!`);
+
   console.log(ruleText);
-}
 
-function startGame(ruleText) {
-  welcomeUser();
-  userName = getUserName();
-  showRules(ruleText);
-}
+  for (let i = 0; i < roundsQuantity; i++) {
+    const questionValue = getQuestionValue();
+    console.log(`Question: ${questionValue}`);
 
-function playRound(round, questionValue, correctAnswer, checkAnswer) {
-  showQuestion(questionValue);
-  const userAnswer = getUserAnswer();
+    const correctAnswer = calcCorrectAnswer(questionValue);
 
-  const result = checkAnswer(userAnswer, correctAnswer);
+    const userAnswer = readlineSync.question('Your answer: ');
 
-  showResultMessage(result, round, userName, userAnswer, correctAnswer);
+    const result = checkAnswer(userAnswer, correctAnswer);
 
-  return result;
+    showResultMessage(result, i, userName, userAnswer, correctAnswer);
+
+    if (!result) {
+      return;
+    }
+  }
 }
 
 export {
-  roundsQuantity, 
   getRandomNumber,
-  startGame,
-  playRound,
+  playGame,
 };
