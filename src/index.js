@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 
-let userName = '';
 const roundsQuantity = 3;
 const minRandomNumber = 1;
 const maxRandomNumber = 101;
@@ -37,7 +36,7 @@ function showResultMessage(result, round, name, userAnswer, correctAnswer) {
 function playGame(ruleText, getQuestionValue, calcCorrectAnswer, checkAnswer) {
   console.log('Welcome to the Brain Games!');
 
-  userName = readlineSync.question('May I have your name: ');
+  const userName = readlineSync.question('May I have your name: ');
 
   console.log(`Hello, ${userName}!`);
 
