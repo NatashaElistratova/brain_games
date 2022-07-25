@@ -8,7 +8,7 @@ function calcResult(value) {
     return false;
   }
 
-  for (let i = 2; i < Math.sqrt(value); i++) {
+  for (let i = 2; i < Math.sqrt(value) + 1; i++) {
     if (value % i === 0) {
       return false;
     }
