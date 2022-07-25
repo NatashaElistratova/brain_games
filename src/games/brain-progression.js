@@ -10,7 +10,7 @@ function getProgression(firstNumber, step, length) {
   const result = [firstNumber];
   let prevNumber = firstNumber;
 
-  for (let i = 0; i < length - 1; i++) {
+  for (let i = 1; i < length - 1; i++) {
     const arrItem = Number(prevNumber) + Number(step);
     result.push(arrItem);
     prevNumber = arrItem;
