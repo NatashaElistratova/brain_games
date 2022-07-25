@@ -10,7 +10,7 @@ function getProgression(firstNumber, step, length) {
   const result = [firstNumber];
   let prevNumber = firstNumber;
 
-  for (let i = 1; i < length - 1; i++) {
+  for (let i = 0; i < length - 1; i++) {
     const arrItem = Number(prevNumber) + Number(step);
     result.push(arrItem);
     prevNumber = arrItem;
@@ -23,8 +23,7 @@ function createQuestionValue() {
   const firstNumber = getRandomNumber(1, 10);
   const step = getRandomNumber(1, 10);
   const progression = getProgression(firstNumber, step, progressionLength);
-  const missedItemIndex = getRandomNumber(0, progression.length + 1);
-
+  const missedItemIndex = getRandomNumber(0, progression.length);
   correctAnswer = progression.splice(missedItemIndex, 1, '..');
 
   return progression.join(' ');
