@@ -7,16 +7,15 @@ function isNumberEven(number) {
   return number % 2 === 0;
 }
 
-function calcCorrectAnswer(value) {
-  return isNumberEven(value) ? 'yes' : 'no';
-}
+function getRoundData() {
+  const questionValue = getRandomNumber();
+  const correctAnswer = isNumberEven(questionValue) ? 'yes' : 'no';
 
-function checkAnswer(userAnswer, correctAnswer) {
-  return userAnswer.toLowerCase() === correctAnswer;
+  return { questionValue, correctAnswer };
 }
 
 export default function brainEvenGame() {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  playGame(rules, getRandomNumber, calcCorrectAnswer, checkAnswer);
+  playGame(rules, getRoundData);
 }
