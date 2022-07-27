@@ -3,22 +3,13 @@ import readlineSync from 'readline-sync';
 const roundsCount = 3;
 const minRandomNumber = 1;
 const maxRandomNumber = 101;
-let prevRandomNumber = null;
-
-function getRandomInt(min, max) {
-  const minRange = Math.ceil(min);
-  const maxRange = Math.floor(max);
-  return Math.floor(Math.random() * (maxRange - minRange)) + minRange;
-}
 
 function getRandomNumber(min = minRandomNumber, max = maxRandomNumber) {
-  const result = getRandomInt(min, max);
+  const minRange = Math.ceil(min);
+  const maxRange = Math.floor(max);
+  const result = Math.floor(Math.random() * (maxRange - minRange)) + minRange;
 
-  if (result !== prevRandomNumber) {
-    prevRandomNumber = result;
-    return result;
-  }
-  getRandomNumber();
+  return result;
 }
 
 function playGame(rules, getRoundData) {
