@@ -3,7 +3,7 @@ import {
   playGame,
 } from '../index.js';
 
-function calcResult(value) {
+function isPrime(value) {
   if (value < 2) {
     return false;
   }
@@ -17,16 +17,15 @@ function calcResult(value) {
   return true;
 }
 
-function calcCorrectAnswer(value) {
-  return calcResult(value) ? 'yes' : 'no';
-}
+function getRoundData() {
+  const questionValue = getRandomNumber();
+  const correctAnswer = isPrime(questionValue) ? 'yes' : 'no';
 
-function checkAnswer(userAnswer, correctAnswer) {
-  return userAnswer.toLowerCase() === correctAnswer;
+  return { questionValue, correctAnswer };
 }
 
 export default function brainPrimeGame() {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  playGame(rules, getRandomNumber, calcCorrectAnswer, checkAnswer);
+  playGame(rules, getRoundData);
 }
