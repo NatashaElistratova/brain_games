@@ -6,5 +6,8 @@ rules:
   no-plusplus: off
   no-useless-escape: off
   no-trailing-spaces: off
+  no-else-return: off
+  eqeqeq: off
+
 
 

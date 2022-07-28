@@ -28,7 +28,7 @@ function playGame(rules, getRoundData) {
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer === String(correctAnswer)) {
+    if (userAnswer == correctAnswer) {
       console.log('Correct!');
       if (i === roundsCount - 1) {
         console.log(`Congratulations, ${userName}!`);
