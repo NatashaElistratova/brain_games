@@ -5,7 +5,7 @@ import {
 
 const progressionLength = 6;
 
-function getProgression(start, step, length) {
+const getProgression = (start, step, length) => {
   const result = [];
 
   for (let i = 0; i < length; i += 1) {
@@ -14,7 +14,7 @@ function getProgression(start, step, length) {
   }
 
   return result;
-}
+};
 
 function getRoundData() {
   const firstNumber = getRandomNumber(1, 10);

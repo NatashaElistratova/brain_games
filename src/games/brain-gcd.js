@@ -3,7 +3,7 @@ import {
   playGame,
 } from '../index.js';
 
-function calcGcd(value1, value2) {
+const calcGcd = (value1, value2) => {
   const reminder = value1 % value2;
 
   if (reminder === 0) {
@@ -11,7 +11,7 @@ function calcGcd(value1, value2) {
   }
 
   return calcGcd(value2, reminder);
-}
+};
 
 function getRoundData() {
   const number1 = getRandomNumber();

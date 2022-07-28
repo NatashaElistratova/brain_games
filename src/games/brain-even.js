@@ -3,9 +3,7 @@ import {
   playGame,
 } from '../index.js';
 
-function isNumberEven(number) {
-  return number % 2 === 0;
-}
+const isNumberEven = (number) => number % 2 === 0;
 
 function getRoundData() {
   const questionValue = getRandomNumber();

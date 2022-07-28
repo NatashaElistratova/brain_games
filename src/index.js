@@ -4,13 +4,13 @@ const roundsCount = 3;
 const minRandomNumber = 1;
 const maxRandomNumber = 101;
 
-function getRandomNumber(min = minRandomNumber, max = maxRandomNumber) {
+const getRandomNumber = (min = minRandomNumber, max = maxRandomNumber) => {
   const minRange = Math.ceil(min);
   const maxRange = Math.floor(max);
   const result = Math.floor(Math.random() * (maxRange - minRange)) + minRange;
 
   return result;
-}
+};
 
 function playGame(rules, getRoundData) {
   console.log('Welcome to the Brain Games!');

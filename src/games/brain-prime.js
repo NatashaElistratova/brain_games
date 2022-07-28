@@ -3,7 +3,7 @@ import {
   playGame,
 } from '../index.js';
 
-function isPrime(value) {
+const isPrime = (value) => {
   if (value < 2) {
     return false;
   }
@@ -15,7 +15,7 @@ function isPrime(value) {
   }
 
   return true;
-}
+};
 
 function getRoundData() {
   const questionValue = getRandomNumber();

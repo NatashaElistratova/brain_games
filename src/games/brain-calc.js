@@ -5,11 +5,11 @@ import {
 
 const operandValues = ['+', '-', '*'];
 
-function getRandomOperand(values) {
+const getRandomOperand = (values) => {
   const index = getRandomNumber(0, 3);
 
   return values[index];
-}
+};
 
 function getRoundData() {
   const number1 = getRandomNumber();
