@@ -21,7 +21,7 @@ function playGame(rules, getRoundData) {
 
   console.log(rules);
 
-  for (let i = 0; i < roundsCount; i++) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const { questionValue, correctAnswer } = getRoundData();
 
     console.log(`Question: ${questionValue}`);
