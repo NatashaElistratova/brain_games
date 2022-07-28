@@ -5,16 +5,10 @@ import {
 
 const operandValues = ['+', '-', '*'];
 
-const getRandomOperand = (values) => {
-  const index = getRandomNumber(0, 3);
-
-  return values[index];
-};
-
-function getRoundData() {
+const getRoundData = () => {
   const number1 = getRandomNumber();
   const number2 = getRandomNumber();
-  const operand = getRandomOperand(operandValues);
+  const operand = operandValues[getRandomNumber(0, 3)];
   const questionValue = `${number1} ${operand} ${number2}`;
   let correctAnswer;
 
@@ -27,7 +21,7 @@ function getRoundData() {
   }
 
   return { questionValue, correctAnswer };
-}
+};
 
 export default function runBrainCalcGame() {
   const rules = 'What is the result of the expression?';
