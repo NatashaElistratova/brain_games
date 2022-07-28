@@ -8,9 +8,9 @@ function calcGcd(value1, value2) {
 
   if (reminder === 0) {
     return value2;
-  } else {
-    return calcGcd(value2, reminder);
   }
+
+  return calcGcd(value2, reminder);
 }
 
 function getRoundData() {
