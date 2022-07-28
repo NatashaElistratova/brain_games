@@ -29,7 +29,7 @@ function getRoundData() {
   return { questionValue, correctAnswer };
 }
 
-export default function brainCalcGame() {
+export default function runBrainCalcGame() {
   const rules = 'What is the result of the expression?';
 
   playGame(rules, getRoundData);

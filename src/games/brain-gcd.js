@@ -25,7 +25,7 @@ function getRoundData() {
   return { questionValue, correctAnswer };
 }
 
-export default function brainProgression() {
+export default function runBrainGcdGame() {
   const rules = 'Find the greatest common divisor of given numbers.';
 
   playGame(rules, getRoundData);

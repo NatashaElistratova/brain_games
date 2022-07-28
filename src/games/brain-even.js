@@ -14,7 +14,7 @@ function getRoundData() {
   return { questionValue, correctAnswer };
 }
 
-export default function brainEvenGame() {
+export default function runBrainEvenGame() {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   playGame(rules, getRoundData);
