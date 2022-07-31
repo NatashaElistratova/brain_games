@@ -30,15 +30,14 @@ const playGame = (rules, getRoundData) => {
 
     if (userAnswer === String(correctAnswer)) {
       console.log('Correct!');
-      if (i === roundsCount - 1) {
-        console.log(`Congratulations, ${userName}!`);
-      }
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
   }
+
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export {
