@@ -23,8 +23,8 @@ const getRoundData = () => {
   return { questionValue, correctAnswer };
 };
 
-export default function runBrainCalcGame() {
+export default () => {
   const rules = 'What is the result of the expression?';
 
   playGame(rules, getRoundData);
-}
+};

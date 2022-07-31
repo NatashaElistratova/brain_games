@@ -27,8 +27,8 @@ const getRoundData = () => {
   return { questionValue, correctAnswer };
 };
 
-export default function runBrainProgression() {
+export default () => {
   const rules = 'What number is missing in the progression?';
 
   playGame(rules, getRoundData);
-}
+};

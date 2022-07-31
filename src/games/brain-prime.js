@@ -24,8 +24,8 @@ const getRoundData = () => {
   return { questionValue, correctAnswer };
 };
 
-export default function runBrainPrimeGame() {
+export default () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   playGame(rules, getRoundData);
-}
+};
