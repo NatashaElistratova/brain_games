@@ -39,7 +39,7 @@ const playGame = (rules, getRoundData) => {
       return;
     }
   }
-}
+};
 
 export {
   getRandomNumber,
