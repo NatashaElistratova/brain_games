@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/dfaab662c634d41bb196/maintainability)](https://codeclimate.com/github/NatashaElistratova/frontend-project-lvl1/maintainability)
 
 ## Intro
-This packege allows you to play 5 console games. 
+This package allows you to play 5 console games.
 
 Node.js version > 13  is required.
 
@@ -30,17 +30,17 @@ $ brain-even
 ## Demo
 
 Game 1. Brain-even
-[![asciicast](https://asciinema.org/a/xK4h4f2HqI5djJ3wF6oVuOmD4.svg)](https://asciinema.org/a/xK4h4f2HqI5djJ3wF6oVuOmD4)
+[![asciicast](https://asciinema.org/a/CrgBdAVSWcUnjYr8D2h9yat74.svg)](https://asciinema.org/a/CrgBdAVSWcUnjYr8D2h9yat74)
 
 Game 2. Brain-calc
-[![asciicast](  https://asciinema.org/a/ubZhNTwZFTBiQF1aGsebkdXic.svg)]( https://asciinema.org/a/ubZhNTwZFTBiQF1aGsebkdXic)
+[![asciicast]( https://asciinema.org/a/FduicYJ03qnNYqtel9J3DpAFF.svg)]( https://asciinema.org/a/FduicYJ03qnNYqtel9J3DpAFF)
 
 Game 3. Brain-gcd
-[![asciicast]( https://asciinema.org/a/aFcj32myUEpy5pkF6Ccqgrs0C.svg)]( https://asciinema.org/a/aFcj32myUEpy5pkF6Ccqgrs0C)
+[![asciicast]( https://asciinema.org/a/EggA2DGUPdPj2kbLJ1skcxYTZ.svg)]( https://asciinema.org/a/EggA2DGUPdPj2kbLJ1skcxYTZ)
 
 Game 4. Brain-progression
-[![asciicast]( https://asciinema.org/a/tEF4uU7Elc1orLIgGFgCIRfTB.svg)](  https://asciinema.org/a/tEF4uU7Elc1orLIgGFgCIRfTB)
+[![asciicast]( https://asciinema.org/a/sPn8qizksjebX2xqabT3cwjiK.svg)]( https://asciinema.org/a/sPn8qizksjebX2xqabT3cwjiK)
 
 Game 5. Brain-prime
-[![asciicast]( https://asciinema.org/a/hXUQr42o4di6ywIjtME8FXQSq.svg)](  https://asciinema.org/a/hXUQr42o4di6ywIjtME8FXQSq)
+[![asciicast](https://asciinema.org/a/sCRr0bYBEaxooUEL6wkXWbDHE.svg)]( https://asciinema.org/a/sCRr0bYBEaxooUEL6wkXWbDHE)
 
