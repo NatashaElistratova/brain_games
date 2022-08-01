@@ -4,9 +4,10 @@ import {
 } from '../index.js';
 
 const calcGcd = (value1, value2) => {
+  const divider = value1 > value2 ? value2 : value1;
   const reminder = value1 > value2 ? value1 % value2 : value2 % value1;
 
-  return reminder === 0 ? value2 : calcGcd(value2, reminder);
+  return reminder === 0 ? divider : calcGcd(divider, reminder);
 };
 
 const getRoundData = () => {
