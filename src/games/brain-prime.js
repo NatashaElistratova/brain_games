@@ -4,11 +4,15 @@ import {
 } from '../index.js';
 
 const isPrime = (value) => {
-  if (value < 2) {
+  if (value === 1) {
     return false;
   }
 
-  for (let i = 3; i < Math.sqrt(value) + 1; i += 1) {
+  if (value === 2) {
+    return true;
+  }
+
+  for (let i = 2; i < Math.sqrt(value) + 1; i += 1) {
     if (value % i === 0) {
       return false;
     }
