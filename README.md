@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/NatashaElistratova/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/NatashaElistratova/frontend-project-lvl1/actions)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/dfaab662c634d41bb196/maintainability)](https://codeclimate.com/github/NatashaElistratova/frontend-project-lvl1/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/CODE_CLIMATE_SECRET/maintainability)](https://codeclimate.com/github/NatashaElistratova/frontend-project-lvl1/maintainability)
 
 ## Intro
 This package allows you to play 5 console games.
