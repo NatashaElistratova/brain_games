@@ -1,7 +1,5 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/NatashaElistratova/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/NatashaElistratova/frontend-project-lvl1/actions)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/CODE_CLIMATE_SECRET/maintainability)](https://codeclimate.com/github/NatashaElistratova/frontend-project-lvl1/maintainability)
+[![Actions Status](https://github.com/NatashaElistratova/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/NatashaElistratova/frontend-project-lvl1/actions) [![Maintainability](https://api.codeclimate.com/v1/badges/CODE_CLIMATE_SECRET/maintainability)](https://codeclimate.com/github/NatashaElistratova/frontend-project-lvl1/maintainability)
 
 ## Intro
 This package allows you to play 5 console games.
@@ -11,7 +9,7 @@ Node.js version > 13  is required.
 ## Install
 
 ```bash
-$ npm install @hexlet/code
+$ npm install
 ```
 ## Start games
 
