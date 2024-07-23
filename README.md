@@ -28,7 +28,8 @@ $ brain-even
 ## Demo
 
 Game 1. Brain-even
-[![asciicast](https://asciinema.org/a/CrgBdAVSWcUnjYr8D2h9yat74.svg)](https://asciinema.org/a/CrgBdAVSWcUnjYr8D2h9yat74)
+
+[![asciicast](<script src="https://asciinema.org/a/bJMOlPe5F4mFLY0Rl6fiJSOp3.js" id="asciicast-bJMOlPe5F4mFLY0Rl6fiJSOp3" async></script>)
 
 Game 2. Brain-calc
 [![asciicast]( https://asciinema.org/a/FduicYJ03qnNYqtel9J3DpAFF.svg)]( https://asciinema.org/a/FduicYJ03qnNYqtel9J3DpAFF)
