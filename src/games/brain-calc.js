@@ -6,17 +6,16 @@ import {
 const operandValues = ['+', '-', '*'];
 
 const calcResult = (number1, number2, operand) => {
-  let result;
-
-  if (operand === '+') {
-    result = number1 + number2;
-  } else if (operand === '-') {
-    result = number1 - number2;
-  } else if (operand === '*') {
-    result = number1 * number2;
+  switch (operand) {
+    case '+':
+      return number1 + number2;
+    case '-':
+      return number1 - number2;
+    case '*':
+      return number1 * number2;
+    default:
+      break;
   }
-
-  return result;
 };
 
 const getRoundData = () => {
